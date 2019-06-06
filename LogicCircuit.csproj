@@ -46,14 +46,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CircuitBuilder.cs" />
+    <Compile Include="CircuitController.cs" />
+    <Compile Include="Enumerables\ENode.cs" />
+    <Compile Include="Factories\NodeFactory.cs" />
+    <Compile Include="FileParser.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Circuit.cs" />
+    <Compile Include="Models\Nodes\AndNode.cs" />
+    <Compile Include="Models\Nodes\BaseNode.cs" />
+    <Compile Include="Interfaces\INode.cs" />
+    <Compile Include="Models\Nodes\InputHighNode.cs" />
+    <Compile Include="Models\Nodes\InputLowNode.cs" />
+    <Compile Include="Models\Nodes\NotNode.cs" />
+    <Compile Include="Models\Nodes\OrNode.cs" />
+    <Compile Include="Models\Nodes\ProbeNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +92,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Circuit1_FullAdder.txt" />
+    <Content Include="Resources\Circuit2_Decoder.txt" />
+    <Content Include="Resources\Circuit3_Encoder.txt" />
+    <Content Include="Resources\Circuit4_InfiniteLoop.txt" />
+    <Content Include="Resources\Circuit5_NotConnected.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
