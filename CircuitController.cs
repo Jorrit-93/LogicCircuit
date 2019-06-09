@@ -17,11 +17,9 @@ namespace LogicCircuit
 			List<INode> nodes = builder.ProcessNodes(nodeList);
 			builder.ProcessEdges(edgeList, nodes);
 			builder.InstantiateCircuit(nodes);
-			if(!builder.Validate())
-			{
-				return null;
-			}
 			return builder.GetResult();
 		}
+
+
 	}
 }

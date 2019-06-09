@@ -1,5 +1,5 @@
-﻿using LogicCircuit.Enumerables;
-using LogicCircuit.Models;
+﻿using LogicCircuit.Models;
+using LogicCircuit.Models.Nodes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,12 +21,18 @@ namespace LogicCircuit.Factories
 					return new InputHighNode(name);
 				case "INPUT_LOW":
 					return new InputLowNode(name);
+				case "NAND":
+					return new NandNode(name);
+				case "NOR":
+					return new NorNode(name);
 				case "NOT":
 					return new NotNode(name);
 				case "OR":
 					return new OrNode(name);
 				case "PROBE":
 					return new ProbeNode(name);
+				case "XOR":
+					return new XorNode(name);
 			}
 			return null;
 		}

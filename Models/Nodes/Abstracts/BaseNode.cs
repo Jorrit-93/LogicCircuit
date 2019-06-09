@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogicCircuit.Models.Nodes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,8 +32,6 @@ namespace LogicCircuit.Models
 			return nodes;
 		}
 
-		public virtual void Switch(bool value) { }
-
 		public abstract bool Calculate();
 
 		public virtual List<INode> Validate(List<INode> nodeList)
@@ -45,13 +44,14 @@ namespace LogicCircuit.Models
 				{
 					tempNodeList = nodeList.GetRange(0, nodeList.Count);
 					tempNodeList = node.Validate(tempNodeList);
-					if(!tempNodeList.Last().GetType().Name.StartsWith("Input"))
+					if(tempNodeList.Last().GetType().BaseType != typeof(InputNode))
 					{
 						return tempNodeList;
 					}
 				}
-				nodeList = tempNodeList;
+				return tempNodeList;
 			}
+			nodeList.Add(this);
 			return nodeList;
 		}
 	}

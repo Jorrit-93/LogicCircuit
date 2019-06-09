@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogicCircuit.Models.Nodes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +9,12 @@ namespace LogicCircuit.Models
 {
 	class Circuit
 	{
-		private List<INode> inputs = new List<INode>();
+		private List<InputNode> inputs = new List<InputNode>();
 		private List<INode> centers = new List<INode>();
 		private List<INode> outputs = new List<INode>();
 
 
-		public List<INode> GetInputNodes()
+		public List<InputNode> GetInputNodes()
 		{
 			return inputs;
 		}
@@ -27,7 +28,7 @@ namespace LogicCircuit.Models
 			return outputs;
 		}
 
-		public void AddInputNode(INode node)
+		public void AddInputNode(InputNode node)
 		{
 			inputs.Add(node);
 		}
@@ -42,18 +43,24 @@ namespace LogicCircuit.Models
 			outputs.Add(node);
 		}
 
-		public bool Validate()
+		public int Validate()
 		{
 			foreach (INode node in outputs)
 			{
 				List<INode> tempNodeList = new List<INode>();
 				tempNodeList = node.Validate(tempNodeList);
-				if(!tempNodeList.Last().GetType().Name.StartsWith("Input"))
+				INode lastNode = tempNodeList.Last();
+				tempNodeList.RemoveAt(tempNodeList.Count - 1);
+				if (lastNode.GetType().BaseType != typeof(InputNode))
 				{
-					return false;
+					if(tempNodeList.Contains(lastNode))
+					{
+						return 2;
+					}
+					return 1;
 				}
 			}
-			return true;
+			return 0;
 		}
 	}
 }

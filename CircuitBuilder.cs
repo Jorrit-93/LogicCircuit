@@ -1,5 +1,6 @@
 ﻿using LogicCircuit.Factories;
 using LogicCircuit.Models;
+using LogicCircuit.Models.Nodes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -78,11 +79,11 @@ namespace LogicCircuit
 		{
 			nodes.ForEach(element =>
 			{
-				if(element.GetType().Name.StartsWith("Input"))
+				if(element.GetType().BaseType == typeof(InputNode))
 				{
-					circuit.AddInputNode(element);
+					circuit.AddInputNode((InputNode)element);
 				}
-				else if (element.GetType().Name.StartsWith("Probe"))
+				else if (element.GetType() == typeof(ProbeNode))
 				{
 					circuit.AddOutputNode(element);
 				}
@@ -91,11 +92,6 @@ namespace LogicCircuit
 					circuit.AddCenterNode(element);
 				}
 			});
-		}
-
-		public bool Validate()
-		{
-			return circuit.Validate();
 		}
 
 		public Circuit GetResult()

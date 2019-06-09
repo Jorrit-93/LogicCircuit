@@ -2,9 +2,9 @@ D:\Documents\School\HBO Informatica\Jaar 3\Blok 4\DP1\LogicCircuit\LogicCircuit\
 D:\Documents\School\HBO Informatica\Jaar 3\Blok 4\DP1\LogicCircuit\bin\Debug\LogicCircuit.exe.config
 D:\Documents\School\HBO Informatica\Jaar 3\Blok 4\DP1\LogicCircuit\bin\Debug\LogicCircuit.exe
 D:\Documents\School\HBO Informatica\Jaar 3\Blok 4\DP1\LogicCircuit\bin\Debug\LogicCircuit.pdb
-D:\Documents\School\HBO Informatica\Jaar 3\Blok 4\DP1\LogicCircuit\obj\Debug\LogicCircuit.csprojResolveAssemblyReference.cache
 D:\Documents\School\HBO Informatica\Jaar 3\Blok 4\DP1\LogicCircuit\obj\Debug\LogicCircuit.Properties.Resources.resources
 D:\Documents\School\HBO Informatica\Jaar 3\Blok 4\DP1\LogicCircuit\obj\Debug\LogicCircuit.csproj.GenerateResource.Cache
 D:\Documents\School\HBO Informatica\Jaar 3\Blok 4\DP1\LogicCircuit\obj\Debug\LogicCircuit.exe
 D:\Documents\School\HBO Informatica\Jaar 3\Blok 4\DP1\LogicCircuit\obj\Debug\LogicCircuit.pdb
 D:\Documents\School\HBO Informatica\Jaar 3\Blok 4\DP1\LogicCircuit\obj\Debug\LogicCircuit.Form1.resources
+D:\Documents\School\HBO Informatica\Jaar 3\Blok 4\DP1\LogicCircuit\obj\Debug\LogicCircuit.csprojResolveAssemblyReference.cache

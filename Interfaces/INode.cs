@@ -12,7 +12,6 @@ namespace LogicCircuit.Models
 		void AddNode(INode node);
 		List<INode> GetNodes();
 
-		void Switch(bool value);
 		bool Calculate();
 		List<INode> Validate(List<INode> nodeNames);
 	}

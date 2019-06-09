@@ -47,7 +47,6 @@ namespace LogicCircuit
 			this.listView1.TabIndex = 1;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.List;
-			this.listView1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.ListView1_ItemCheck);
 			// 
 			// listView2
 			// 
@@ -67,7 +66,6 @@ namespace LogicCircuit
 			this.listView3.TabIndex = 3;
 			this.listView3.UseCompatibleStateImageBehavior = false;
 			this.listView3.View = System.Windows.Forms.View.List;
-			this.listView3.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.ListView3_ItemCheck);
 			// 
 			// openFileDialog1
 			// 
@@ -82,7 +80,6 @@ namespace LogicCircuit
 			this.button1.TabIndex = 4;
 			this.button1.Text = "Open file";
 			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// label1
 			// 

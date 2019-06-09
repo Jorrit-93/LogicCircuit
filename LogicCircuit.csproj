@@ -48,27 +48,35 @@
   <ItemGroup>
     <Compile Include="CircuitBuilder.cs" />
     <Compile Include="CircuitController.cs" />
-    <Compile Include="Enumerables\ENode.cs" />
     <Compile Include="Factories\NodeFactory.cs" />
     <Compile Include="FileParser.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FileReader.cs" />
+    <Compile Include="UI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="UI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IMediator.cs" />
     <Compile Include="Models\Circuit.cs" />
+    <Compile Include="Models\Components\Abstracts\BaseComponent.cs" />
+    <Compile Include="Models\Components\ButtonComponent.cs" />
+    <Compile Include="Models\Components\ListViewComponent.cs" />
     <Compile Include="Models\Nodes\AndNode.cs" />
-    <Compile Include="Models\Nodes\BaseNode.cs" />
+    <Compile Include="Models\Nodes\Abstracts\BaseNode.cs" />
     <Compile Include="Interfaces\INode.cs" />
     <Compile Include="Models\Nodes\InputHighNode.cs" />
     <Compile Include="Models\Nodes\InputLowNode.cs" />
+    <Compile Include="Models\Nodes\Abstracts\InputNode.cs" />
+    <Compile Include="Models\Nodes\NandNode.cs" />
+    <Compile Include="Models\Nodes\NorNode.cs" />
     <Compile Include="Models\Nodes\NotNode.cs" />
     <Compile Include="Models\Nodes\OrNode.cs" />
     <Compile Include="Models\Nodes\ProbeNode.cs" />
+    <Compile Include="Models\Nodes\XorNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="UI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

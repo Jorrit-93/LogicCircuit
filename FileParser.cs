@@ -10,31 +10,6 @@ namespace LogicCircuit
 {
 	class FileParser
 	{
-
-
-		public List<string> ReadFile(string stream)
-		{
-			string line;
-			List<string> lines = new List<string>();
-			try
-			{
-				StreamReader streamReader = new StreamReader(stream);
-				line = streamReader.ReadLine();
-				while(line != null)
-				{
-					lines.Add(line);
-					line = streamReader.ReadLine();
-				}
-				streamReader.Close();
-				return lines.ToArray().Where(element => !element.Contains('#')).ToList();
-			}
-			catch(Exception e)
-			{
-				Console.WriteLine(e.Message);
-				return null;
-			}
-		}
-
 		public List<string> GetNodeList(List<string> lines)
 		{
 			List<string> returnValue = lines;
